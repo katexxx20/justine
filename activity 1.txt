@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int num;
+   float price;
+   char name;
+   
+    printf("monthsary:");
+scanf("%i",&num);
+  printf(" You entered number %i\n" ,num);
+  
+    printf("mahal kita:");
+    scanf("%f",&price);
+     printf(" monthsary %f\n" ,price);
+     
+       printf("mwa:");
+    scanf("%c",&name);
+     printf(" You entered number %c\n" ,name);
+     
+     int myNum = 15;
+     float myFloatNum = 5.99;
+     char myLetter = 'd';
+     
+     // Print variables
+     printf("%d\n", myNum);
+      printf("%.4f\n", myFloatNum);
+      printf("%c\n", myLetter);
+      
+      int x,y,z;
+      
+      x=y=z=50;
+       printf("%d",x+y+z);
+     
+     
+     
+    return 0;
+}
+  
+}
