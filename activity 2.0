@@ -1,0 +1,40 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int num;
+    char fname[50],mname[50],lname[50];
+
+   printf("Enter your first name:");
+    scanf("%s",&fname);
+     printf(" You entered first name %s\n" ,fname);
+   
+    printf("Enter your middle name:");
+    scanf("%s",&mname);
+     printf(" You entered middle name: %s\n" ,mname);
+    
+  printf("Enter your last name:");
+    scanf("%s",&lname);
+     printf(" You entered last name: %s\n" ,lname);
+     
+      printf("Enter your Birth year:");
+    scanf("%i",&num);
+     printf(" You entered your birth year:%i\n" ,num);
+     
+     
+  printf("\nUser Information:");
+   
+   int currentyear,birthyear,output;
+   
+   currentyear=2025;
+    output = currentyear - num;
+
+      printf("first name: %s\n" ,fname);
+     printf("middle name: %s\n" ,mname);
+     printf("last name: %s\n" ,lname);
+   printf("birth year: %d\n" ,num);
+    printf("Calculated Age: %d\n",output);
+    
+
+
+    return 0;
