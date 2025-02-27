@@ -1,0 +1,22 @@
+int main(){
+    int x;
+
+printf("enter your grade (0-100):");
+scanf("%i",&x);
+
+if(x>100){
+printf("ERROR: Your grade can only be 100");
+}else if(x>89){
+printf("Your grade is: A");
+}else if(x>79){
+printf("Your grade is: B");
+}else if(x>69){
+printf("Your grade is: C");
+}else if(x>59){
+printf("Your grade is: D");
+}else if(x>0<49){
+printf("Your grade is: F");
+
+}
+return 0;
+}
