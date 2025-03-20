@@ -1,0 +1,37 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+ //create a function
+
+void calculationSum() {
+    int x=5;int y=10;
+    int sum=x+y;
+    printf("The sum of x + y is;%d\n",sum);
+}
+
+void calculationDifference() {
+    int x=5;int y=10;
+    int Difference=x-y;
+    printf("The difference of x - y is;%d\n",Difference);
+}
+
+void calculationQuotient() {
+    int x=10;int y=5;
+    int Quotient=x/y;
+    printf("The Quotient of x / y is;%d\n",Quotient);
+} 
+
+void calculationProduct() {
+    int x=10;int y=5;
+    int Product=x*y;
+    printf("The Product of x * y is;%d\n",Product);
+} 
+int main() {
+   calculationSum(); 
+   calculationDifference(); 
+   calculationQuotient();
+   calculationProduct();
+    return 0;
+}
+
+
