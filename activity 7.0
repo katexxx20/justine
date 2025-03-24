@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+//create a function
+void calculationSquare(int x){
+    printf("Square of %d is: %d\n", x, x * x);
+   
+}
+
+int main() {
+    int e;
+    
+    printf("Enter a number: ");
+     scanf("%d", &e);
+    
+
+    for(int i = 0;i<=e; i++)
+    
+  calculationSquare(i);  
+ 
+    return 0;
+}
