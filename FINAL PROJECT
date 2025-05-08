@@ -1,0 +1,76 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>  
+
+#define MAX_CONTACTS 3
+
+char name[MAX_CONTACTS][50], phone[MAX_CONTACTS][15];
+int start = 0;
+
+void create() {
+    if (start >= MAX_CONTACTS) {
+        printf("Contact list full!\n");
+        return;
+    }
+    printf("Enter your name: ");
+    scanf("%s", name[start]);
+    printf("Enter your phone: ");
+    scanf("%s", phone[start]);
+    printf("Contact added successfully!\n");
+    start++;
+}
+
+void read() {
+    if (start == 0) {
+        printf("No contacts found.\n");
+        return;
+    }
+    printf("Contact List:\n");
+    for (int i = 0; i < start; i++)
+        printf("Name: %s, Number: %s\n", name[i], phone[i]);
+}
+
+void update() {
+    int idx;
+    printf("Enter the index of the contact to update:");
+    scanf("%d", &idx);
+    if (idx >= 0 && idx < start) {
+        printf("Enter your new name: ");
+        scanf("%s", name[idx]);
+        printf("Enter your new phone: ");
+        scanf("%s", phone[idx]);
+        printf("Contact updated successfully!\n");
+    } else {
+        printf("Invalid index!\n");
+    }
+}
+
+void delete() {
+    int idx;
+    printf("Enter the index of the contact to delete: ");
+    scanf("%d", &idx);
+    if (idx >= 0 && idx < start) {
+        (&name[idx], &name[idx + 1], (start - idx - 1) * sizeof(name[0]));
+       (&phone[idx], &phone[idx + 1], (start - idx - 1) * sizeof(phone[0]));
+        start--;
+        printf("Contact deleted successfully!\n");
+    } else {
+        printf("Invalid index!\n");
+    }
+}
+
+int main() {
+    int choice;
+    while (1) {
+        printf("\nCRUD Contact List\n1. Create\n2. Read\n3. Update\n4. Delete\n5. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1: create(); break;
+            case 2: read(); break;
+            case 3: update(); break;
+            case 4: delete(); break;
+            case 5: return 0;
+            default: printf("Invalid choice!\n");
+        }
+    }
+}
